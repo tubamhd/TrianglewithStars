@@ -1,33 +1,35 @@
 import java.util.Scanner;
 
-public class MakingTriangle {
+public class NewTriangle {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        
-       /* System.out.println("Enter Number to Make Triangle:  ");
-        int no = input.nextInt();*/
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter Number For Triangle:  ");
+        int invalue = scan.nextInt();
+        invalue /= 2;
+        invalue++;
 
-        /*int n = 5;
-        for (int i = 0; i <= n ; i++) {
-            for (int j = 0; j < (n - i); j++) {
+
+        for(int i = 0; i<invalue; i++){
+
+            for(int j = invalue; j> (i+1); j--)
                 System.out.print(" ");
-            }
-            for (int k = 1; k <= (2 * i + 1); k++) {
+
+            for(int k = 0; k< (i*2)+1; k++){
                 System.out.print("*");
             }
-            System.out.println(" ");
-        }*/
+            System.out.println();
+        }
 
-        int n = 5;
-        for(int i = 0; i<n;i++){
-            for(int c = 0; c<(n-i);c++){
+        int g = 1;
+        for(int i = invalue-1; i> 0; i--){
+
+            for(int j = 0; j< g; j++)
                 System.out.print(" ");
-            }
-            for(int x = 0; x<(1+i*2);x++){
-                System.out.print("*");
-            }
+            g++;
 
-            System.out.println("");
+            for(int k=0; k< (i*2)-1; k++)
+                System.out.print("*");
+            System.out.println();
         }
     }
 }
